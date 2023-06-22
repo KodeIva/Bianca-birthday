@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from 'react'
+import ConfettiExplision from 'react-confetti-explosion'
+import Confetti from 'react-confetti'
 
 const Countdown = ({birthday}) => {
  const [days, setDays] = useState(0)
