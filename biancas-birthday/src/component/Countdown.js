@@ -32,21 +32,22 @@ const Countdown = ({birthday}) => {
 
   return (
     <div className='flex items-center'>
-        <div className='flex flex-col items-center'>
+        <div className='flex flex-col items-center m-2'>
             <h3>Days</h3>
             <p>{days}</p>
         </div>
-        <div className='flex flex-col items-center'>
+        <div className='flex flex-col items-center m-2'>
             <h3>Hours</h3>
-            <p>{hours}</p>
+            <p>{hours < 10 ? `0${hours}` : {hours}}</p>
         </div>
-        <div className='flex flex-col items-center'> 
+        <div className='flex flex-col items-center m-2'> 
             <h3>Minutes</h3>
-            <p>{minutes}</p>
+            {minutes < 10 ? <p>0{minutes}</p> : <p>{minutes}</p>}    
         </div>
-        <div className='flex flex-col items-center'>
+        <div className='flex flex-col items-center m-2'>
             <h3>Seconds</h3>
-            <p>{seconds}</p>
+            {seconds < 10 ? <p>0{seconds}</p> : <p>{seconds}</p>}
+            
         </div>
     </div>
   )

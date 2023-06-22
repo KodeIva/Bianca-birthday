@@ -1,12 +1,12 @@
 import Countdown from "./component/Countdown";
 
 function App() {
- const birthday = new Date("Jun 14, 2023 10:15").getTime()
+ const birthday = new Date("Jun 22, 2023 20:15").getTime()
  console.log(birthday);
 
 
   return (
-    <div className="flex flex-col justify-center items-center text-orange-400 font-bold w-full h-screen bg-pink-200">
+    <div className="flex flex-col justify-center items-center text-lg text-orange-400 font-bold w-full h-screen bg-pink-200">
      <h2>Bianca's Birthday</h2>
      <Countdown birthday={birthday} />
     </div>
