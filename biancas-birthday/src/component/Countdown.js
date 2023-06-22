@@ -9,6 +9,12 @@ const Countdown = ({birthday}) => {
  const [seconds, setSeconds] = useState(0)
  const [isBirthday, setIsBirthday] = useState(false)
  const [screen, setScreen] = useState({width: window.innerWidth, height: window.innerHeight})
+ const [isExploding, setIsExploding] = useState(false)
+
+ function confettiExplosion(e) {
+    e.preventDefault()
+    setIsExploding(!isExploding)
+ }
 
  useEffect(() => {
     const timer = setInterval(() => {
@@ -52,6 +58,10 @@ const Countdown = ({birthday}) => {
             <span className='text-green-500'>!</span>
             <span>!</span>
         </h1>
+        <br />
+        <button onClick={confettiExplosion}>Surprise</button>
+        {isExploding && <ConfettiExplision />}
+        <ConfettiExplision/>
     </div>)
      :
     (<div className='flex items-center'>
