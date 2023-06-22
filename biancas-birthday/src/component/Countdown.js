@@ -5,6 +5,7 @@ const Countdown = ({birthday}) => {
  const [hours, setHours] = useState(0)
  const [minutes, setMinutes] = useState(0)
  const [seconds, setSeconds] = useState(0)
+ const [isBirthday, setIsBirthday] = useState(false)
 
  useEffect(() => {
     const timer = setInterval(() => {
@@ -16,7 +17,7 @@ const Countdown = ({birthday}) => {
       let hour = 60*60*1000
       let minute = 60*1000
       let second = 1000
-
+     if(timeLeft > 0) {
       let days = Math.floor(timeLeft / day)
       let hours = Math.floor(timeLeft / hour)
       let minutes = Math.floor((timeLeft % hour) / minute)
@@ -26,12 +27,28 @@ const Countdown = ({birthday}) => {
       setHours(hours)
       setMinutes(minutes)
       setSeconds(seconds)
+     } else{
+        setIsBirthday(true)
+     }
     },1000)
     return () => clearInterval(timer)
  },[birthday])
 
   return (
-    <div className='flex items-center'>
+    <div>
+    {isBirthday ?
+     (<div>
+        <h1 id='happy' className='text-4xl '>
+            <span className='text-blue-500'>Happy</span>
+            <span className='text-yellow-400'> Birthday</span>
+            <span className='text-red-500'> Bianca</span> 
+            <span className='text-purple-500'>!</span> 
+            <span className='text-green-500'>!</span>
+            <span>!</span>
+        </h1>
+    </div>)
+     :
+    (<div className='flex items-center'>
         <div className='flex flex-col items-center m-2'>
             <h3>Days</h3>
             <p>{days}</p>
@@ -49,6 +66,9 @@ const Countdown = ({birthday}) => {
             {seconds < 10 ? <p>0{seconds}</p> : <p>{seconds}</p>}
             
         </div>
+    </div>)
+    }
+    
     </div>
   )
 }

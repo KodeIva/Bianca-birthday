@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Rock+3D&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+
+#happy {
+    font-family: 'Rock 3D', cursive;
+    font-family: 'Comforter', cursive;
+    font-family: 'Zeyada', cursive;
+
+    letter-spacing: 3px;
+}
