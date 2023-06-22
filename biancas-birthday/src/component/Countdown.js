@@ -8,6 +8,7 @@ const Countdown = ({birthday}) => {
  const [minutes, setMinutes] = useState(0)
  const [seconds, setSeconds] = useState(0)
  const [isBirthday, setIsBirthday] = useState(false)
+ const [screen, setScreen] = useState({width: window.innerWidth, height: window.innerHeight})
 
  useEffect(() => {
     const timer = setInterval(() => {
@@ -39,7 +40,10 @@ const Countdown = ({birthday}) => {
   return (
     <div>
     {isBirthday ?
+   
      (<div>
+        <Confetti width={screen.width} height={screen.height} numberOfPieces={250}
+                  colors={['white','orangered','lightblue','lightgreen','violet','yellow']} />
         <h1 id='happy' className='text-4xl '>
             <span className='text-blue-500'>Happy</span>
             <span className='text-yellow-400'> Birthday</span>
