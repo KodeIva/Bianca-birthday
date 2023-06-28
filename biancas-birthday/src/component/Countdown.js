@@ -47,19 +47,21 @@ const Countdown = ({birthday}) => {
     <div>
     {isBirthday ?
    
-     (<div>
+     (<div className='flex flex-col items-center p-4'>
         <Confetti width={screen.width} height={screen.height} numberOfPieces={250}
                   colors={['white','orangered','lightblue','lightgreen','violet','yellow']} />
-        <h1 id='happy' className='text-4xl '>
-            <span className='text-blue-500'>Happy</span>
-            <span className='text-yellow-400'> Birthday</span>
-            <span className='text-red-500'> Bianca</span> 
-            <span className='text-purple-500'>!</span> 
-            <span className='text-green-500'>!</span>
-            <span>!</span>
+        <h1 id='happy' className='flex flex-wrap text-4xl m-3'>
+            <span className='text-blue-500 text-8xl m-3'>Happy</span>
+            <span className='text-yellow-400 text-8xl m-3'> Birthday</span>
+            <span className='text-red-500 text-8xl m-3'> Bianca</span> 
+            <span className='text-purple-500 text-8xl m-3'>!</span> 
+            <span className='text-green-500 text-8xl m-3'>!</span>
+            <span className='text-8xl m-3'>!</span>
         </h1>
         <br />
-        <button onClick={confettiExplosion}>Surprise</button>
+        <button 
+          className='bg-orange-300 text-white tracking-widest w-[130px]'
+          onClick={confettiExplosion}>Surprise</button>
         {isExploding && <ConfettiExplision />}
         <ConfettiExplision/>
     </div>)
@@ -71,7 +73,7 @@ const Countdown = ({birthday}) => {
         </div>
         <div className='flex flex-col items-center m-2'>
             <h3>Hours</h3>
-            <p>{hours < 10 ? `0${hours}` : {hours}}</p>
+            <p>{hours}</p>
         </div>
         <div className='flex flex-col items-center m-2'> 
             <h3>Minutes</h3>

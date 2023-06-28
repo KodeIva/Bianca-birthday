@@ -1,7 +1,7 @@
 import Countdown from "./component/Countdown";
 
 function App() {
- const birthday = new Date("Jun 22, 2023 14:03").getTime()
+ const birthday = new Date("Jun 28, 2023 22:31").getTime()
  console.log(birthday);
 
 
