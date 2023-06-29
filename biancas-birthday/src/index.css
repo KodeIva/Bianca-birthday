@@ -6,11 +6,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Rock+3D&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 #happy {
     font-family: 'Rock 3D', cursive;
     font-family: 'Comforter', cursive;
     font-family: 'Zeyada', cursive;
-
     letter-spacing: 3px;
+}
+
+h2 {
+    font-family: 'Kablammo', cursive;
+    font-family: 'Permanent Marker', cursive;
+    font-family: 'Amatic SC', cursive;
+}
+
+button {
+    font-family: 'Amatic SC', cursive;
+    font-family: 'Poppins', sans-serif;
 }

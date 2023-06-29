@@ -60,7 +60,7 @@ const Countdown = ({birthday}) => {
         </h1>
         <br />
         <button 
-          className='bg-orange-300 text-white tracking-widest w-[130px]'
+          className='bg-pink-500 rounded-xl text-white tracking-widest w-[auto] p-3'
           onClick={confettiExplosion}>Surprise</button>
         {isExploding && <ConfettiExplision />}
         <ConfettiExplision/>
