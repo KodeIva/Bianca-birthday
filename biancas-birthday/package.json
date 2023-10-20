@@ -1,5 +1,5 @@
 {
-  "homepage": "https://kodeiva.github.io/biancas-birthday",
+  "homepage": "https://kodeiva.github.io/Bianca-birthday/",
   "name": "biancas-birthday",
   "version": "0.1.0",
   "private": true,
@@ -41,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.23.2",
     "autoprefixer": "^10.4.14",
     "gh-pages": "^5.0.0",
     "postcss": "^8.4.24",
